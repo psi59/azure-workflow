@@ -1,0 +1,65 @@
+services:
+  - name: Virtual Machines
+    aliases: [vm, virtual machine, 가상머신]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Compute%2FVirtualMachines
+    icon: icons/vm.svg
+
+  - name: App Service
+    aliases: [app, web app, webapp, 앱서비스]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites
+    icon: icons/app-service.svg
+
+  - name: Storage Accounts
+    aliases: [storage, blob, 스토리지]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Storage%2FStorageAccounts
+    icon: icons/storage.svg
+
+  - name: SQL Database
+    aliases: [sql, database, db, mssql]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Sql%2Fservers%2Fdatabases
+    icon: icons/sql.svg
+
+  - name: Functions
+    aliases: [function, func, serverless, 함수]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp
+    icon: icons/functions.svg
+
+  - name: Container Instances
+    aliases: [container, aci, 컨테이너]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ContainerInstance%2FcontainerGroups
+    icon: icons/aci.svg
+
+  - name: AKS
+    aliases: [aks, kubernetes, k8s, 쿠버네티스]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ContainerService%2FmanagedClusters
+    icon: icons/aks.svg
+
+  - name: CosmosDB
+    aliases: [cosmos, cosmosdb, nosql, documentdb]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DocumentDb%2FdatabaseAccounts
+    icon: icons/cosmosdb.svg
+
+  - name: Key Vault
+    aliases: [keyvault, vault, secret, key, 키볼트]
+    url: https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.KeyVault%2Fvaults
+    icon: icons/keyvault.svg
+
+  - name: Monitor
+    aliases: [monitor, monitoring, log, 모니터]
+    url: https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview
+    icon: icons/monitor.svg
+
+  - name: Azure OpenAI Service
+    aliases: [openai, gpt, chatgpt, llm, aoai]
+    url: https://oai.azure.com/
+    icon: icons/openai.svg
+
+  - name: AI Foundry
+    aliases: [ai foundry, foundry, ai studio]
+    url: https://ai.azure.com/
+    icon: icons/ai-foundry.svg
+
+  - name: Machine Learning
+    aliases: [ml, machine learning, aml, mlops]
+    url: https://ml.azure.com/
+    icon: icons/ai-foundry.svg

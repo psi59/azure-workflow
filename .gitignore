@@ -1,0 +1,24 @@
+# Binaries
+azure-workflow
+azure-workflow-arm64
+azure-workflow-amd64
+*.exe
+
+# Alfred workflow package
+*.alfredworkflow
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Test coverage
+coverage.out
+coverage.html
+
+# Downloaded icons (keep only committed ones)
+azure-icon.svg
