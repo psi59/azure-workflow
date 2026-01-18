@@ -3,6 +3,7 @@ azure-workflow
 azure-workflow-arm64
 azure-workflow-amd64
 *.exe
+*.alfredworkflow
 
 # Alfred workflow package
 *.alfredworkflow

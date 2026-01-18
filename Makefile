@@ -1,4 +1,4 @@
-.PHONY: build test clean install package version-sync
+.PHONY: build test clean install package version-sync sign
 
 BINARY_NAME=azure-workflow
 VERSION=$(shell cat VERSION)
@@ -19,12 +19,9 @@ clean:
 	rm -f $(BINARY_NAME)-amd64
 	rm -f azure-workflow.alfredworkflow
 
-install: build
-	mkdir -p $(WORKFLOW_DIR)
-	cp $(BINARY_NAME) $(WORKFLOW_DIR)/
-	cp services.yaml $(WORKFLOW_DIR)/
-	cp info.plist $(WORKFLOW_DIR)/
-	cp -r icons $(WORKFLOW_DIR)/
+install: package
+	xattr -d com.apple.quarantine azure-workflow.alfredworkflow 2>/dev/null || true
+	open azure-workflow.alfredworkflow
 
 # Build flags for release
 LDFLAGS=-s -w
@@ -41,8 +38,12 @@ build-universal:
 version-sync:
 	@plutil -replace version -string "$(VERSION)" info.plist
 
+# Ad-hoc code signing for macOS Gatekeeper compatibility
+sign:
+	codesign --sign - --force $(BINARY_NAME)
+
 # Alfred workflow package
-package: build-universal version-sync
+package: build-universal version-sync sign
 	zip -r azure-workflow.alfredworkflow $(BINARY_NAME) services.yaml info.plist icons/ icon.png
 
 run:
