@@ -16,6 +16,22 @@ An Alfred workflow for quick access to Azure Portal services. Search and open Az
 2. Double-click the downloaded file to install in Alfred
 3. Start using with the `azure` keyword
 
+## Troubleshooting
+
+### macOS Security Warning
+
+If you see "cannot be opened because the developer cannot be verified":
+
+**Option 1: Terminal command**
+```bash
+xattr -d com.apple.quarantine ~/Downloads/azure-workflow.alfredworkflow
+```
+Then double-click to install.
+
+**Option 2: System Settings**
+1. Go to System Settings > Privacy & Security
+2. Click "Open Anyway" next to the blocked app warning
+
 ## Usage
 
 1. Open Alfred (default: `Cmd + Space`)
